@@ -54,11 +54,16 @@ const aURL = [
 // the comma at the end is important!
 // You can't add more items because there are only 12 placeholders on the dashboard
 // but you can replace the titles and the images with anything you want.
+// grostig "LOCAL RADAR",
+// SA/ATX  https://www.weather.gov/ewx/radar
+// "https://radar.weather.gov/ridge/standard/KEWX_loop.gif",
+// Lockhart
+// "https://radar.weather.gov/ridge/standard/KGRK_loop.gif",
 const aIMG = [
   ["RADAR", "https://radar.weather.gov/ridge/standard/CONUS_loop.gif"],
   [
     "LOCAL RADAR",
-    "https://radar.weather.gov/ridge/standard/KNQA_loop.gif",
+    "https://radar.weather.gov/ridge/standard/KGRK_loop.gif",
   ],
   [
     "NOAA D-RAP",
@@ -71,11 +76,15 @@ const aIMG = [
   ],
   [
     "SATELLITE CAN",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/can/EXTENT3/GOES16-CAN-EXTENT3-1125x560.gif",
+    //"https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/can/EXTENT3/GOES16-CAN-EXTENT3-1125x560.gif",
+    "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/CONUS/GEOCOLOR/GOES16-CONUS-GEOCOLOR-625x375.gif",
   ],
   [
     "SATELLITE CGL",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/cgl/EXTENT3/GOES16-CGL-EXTENT3-600x600.gif",
+    //"https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/cgl/EXTENT3/GOES16-CGL-EXTENT3-600x600.gif",
+    //https://www.star.nesdis.noaa.gov/GOES/sector.php?sat=G16&sector=sp
+      "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/sp/EXTENT3/GOES16-SP-EXTENT3-600x600.gif",
+    //"https://cdn.star.nesdis.noaa.gov/GOES16/ABI/SECTOR/sp/EXTENT3/GOES16-ABI-EXTENT3-600x600.gif",
   ],
   [
     "LIGHTNING",
@@ -83,7 +92,7 @@ const aIMG = [
   ],
   [
     "LIGHTNING LOCAL",
-    "https://www.blitzortung.org/en/Images/image_b_ny.png",
+    "https://www.blitzortung.org/en/Images/image_b_tx.png",
   ],
   ["GREY LINE", "https://www.timeanddate.com/scripts/sunmap.php?iso=now"],
   [
@@ -98,4 +107,7 @@ const aIMG = [
 ];
 
 // Image rotation intervals in milliseconds per tile - If the line below is commented, all tiles will be rotated every 30000 milliseconds (30s)
-const tileDelay = [11200,10000,11000,10100,10200,10500,10300,10600,10400,10700,10900,10800];
+//const tileDelay = [11200,10000,11000,10100,10200,10500,10300,10600,10400,10700,10900,10800];
+const tileDelay = [ 30000, 30000,30000,15000,
+                    120000, 60000,30000,30000,
+                     30000, 30000,30000,90000];
